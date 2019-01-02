@@ -1,21 +1,33 @@
 package com.example.demo.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private Long id;
 
-    private String username;
+    private String userName;
 
-    private String name;
-
-    private String email;
-
-    private String password;
-
-    private String mobile;
+    private String nickName;
 
     private Byte sex;
 
-    private String userpic;
+    private Byte age;
+
+    private String password;
+
+    private String email;
+
+    private String userPic;
+
+    private String salt;
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
 
     public Long getId() {
         return id;
@@ -25,44 +37,20 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile == null ? null : mobile.trim();
+    public void setNickName(String nickName) {
+        this.nickName = nickName == null ? null : nickName.trim();
     }
 
     public Byte getSex() {
@@ -73,11 +61,36 @@ public class User {
         this.sex = sex;
     }
 
-    public String getUserpic() {
-        return userpic;
+    public Byte getAge() {
+        return age;
     }
 
-    public void setUserpic(String userpic) {
-        this.userpic = userpic == null ? null : userpic.trim();
+    public void setAge(Byte age) {
+        this.age = age;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
+
+    public String getUserPic() {
+        return userPic;
+    }
+
+    public void setUserPic(String userPic) {
+        this.userPic = userPic == null ? null : userPic.trim();
+    }
+
 }
